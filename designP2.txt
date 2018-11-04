@@ -1,0 +1,11 @@
+Design explanation for part 2:
+
+After one line of expression is read, evaluation(exp) will be called. And finally output() of the return value of evaluation is called.
+
+evaluation() will call eval() on the expression. 
+
+eval() first checks if the expression is an function definition and call defun() if it is.
+
+Then eval() will check if the expression is an atom, one of three notations or function application and call the funtion respectively.
+
+In the function application case, apply() will first check if the function is primitive functions and check the dList if not. New aList adding new bindings for the function is returned is passed to apply(), and finally the outcome of the function is returned.

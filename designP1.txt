@@ -1,0 +1,18 @@
+Design explanation:
+
+There are two Class in the interpreter.
+
+The first one is Lisp which has input, output and evaluate (not implemented in part 1) function. 
+
+When calling the read() function of a List instance it will sequentially call input, evaluate and output.
+
+Another class is Tree. It contains the atom or the binaric expression.
+
+In the main function, the standard input will first be trimmed to only contain legal tokens for the Lisp
+i.e. "(", ")", ".", and numberic or symbolic atom. Any other items except for $ and whitespace will cause an error
+
+Any legal lisp express is started with atom or "(", so the input function test this recursively and return the reference to the expression.
+Output function just simply output the left and right child of the tree all the way to the leaves
+
+D-list, a-list is maintained in the instance of Lisp Class, although not used in part 1. 
+A list of symbolic items is allow maintained to ensure the same symbolic atom is referring to the same item in the list.
