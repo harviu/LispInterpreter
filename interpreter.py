@@ -349,6 +349,9 @@ def main():
                         tokens.append(t2)
                 else:
                     t = int(t)
+                    if not sign == 0:
+                        t = sign * t
+                        sign = 0
                     tokens.append(t)
 
             #just push other possible tokens
